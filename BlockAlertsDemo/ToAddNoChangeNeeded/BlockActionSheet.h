@@ -4,19 +4,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SRAASFactories.h"
 
 /**
  * A simple block-enabled API wrapper on top of UIActionSheet.
  */
 @interface BlockActionSheet : NSObject {
 @private
-    UIView *_view;
-    NSMutableArray *_blocks;
-    CGFloat _height;
+  UIView *_view;
+  NSMutableArray *_blocks;
+  CGFloat _height;
+  id <SRAASButtonFactory> _buttonFactory;
 }
 
 @property (nonatomic, readonly) UIView *view;
 @property (nonatomic, readwrite) BOOL vignetteBackground;
+@property (nonatomic, retain) id <SRAASButtonFactory> buttonFactory;
 
 + (id)sheetWithTitle:(NSString *)title;
 

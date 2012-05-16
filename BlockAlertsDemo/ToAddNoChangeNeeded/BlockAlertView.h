@@ -4,13 +4,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SRAASFactories.h"
 
 @interface BlockAlertView : NSObject {
 @protected
-    UIView *_view;
-    NSMutableArray *_blocks;
-    CGFloat _height;
+  UIView *_view;
+  NSMutableArray *_blocks;
+  CGFloat _height;
+  id <SRAASButtonFactory> _buttonFactory;
 }
+@property (nonatomic, retain) id <SRAASButtonFactory> buttonFactory;
 
 + (BlockAlertView *)alertWithTitle:(NSString *)title message:(NSString *)message;
 

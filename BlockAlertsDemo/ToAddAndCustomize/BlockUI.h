@@ -19,11 +19,6 @@
 #define kActionSheetTitleShadowColor    [UIColor blackColor]
 #define kActionSheetTitleShadowOffset   CGSizeMake(0, -1)
 
-#define kActionSheetButtonFont          [UIFont boldSystemFontOfSize:20]
-#define kActionSheetButtonTextColor     [UIColor whiteColor]
-#define kActionSheetButtonShadowColor   [UIColor blackColor]
-#define kActionSheetButtonShadowOffset  CGSizeMake(0, -1)
-
 #define kActionSheetBackground              @"action-sheet-panel.png"
 #define kActionSheetBackgroundCapHeight     30
 
